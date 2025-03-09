@@ -5,9 +5,9 @@ const Navbar = ({ user, setUser }) => {
   const navigate = useNavigate();
 
   const handleLogout = () => {
-    localStorage.removeItem("user");
-    setUser(null);
-    navigate("/");
+    localStorage.removeItem("user"); // Șterge user-ul
+    setUser(null); // Actualizează state-ul
+    navigate("/"); // Redirecționează la homepage
   };
 
   return (
@@ -16,7 +16,7 @@ const Navbar = ({ user, setUser }) => {
       <div className="nav-buttons">
         {user ? (
           <>
-            <span className="user-info">Bine ai venit, {user.tip}!</span>
+            <span className="user-info">Bine ai venit, {user.nume}!</span>
             <button onClick={handleLogout}>Logout</button>
           </>
         ) : (

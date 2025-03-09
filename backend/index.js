@@ -18,11 +18,13 @@ syncDB(); // Sincronizează modelele înainte de a porni serverul
 const sportivRoutes = require("./routes/sportivRoutes");
 const antrenorRoutes = require("./routes/antrenorRoutes");
 const authRoutes = require("./routes/authRoutes");
+const clubRoutes = require("./routes/clubRoutes");
 
 // ✅ Definim rutele
 app.use("/api/sportivi", sportivRoutes);
 app.use("/api/antrenori", antrenorRoutes);
 app.use("/api/autentificare", authRoutes);
+app.use("/api/cluburi", clubRoutes);
 
 // ✅ Rută de test
 app.get("/", (req, res) => {
